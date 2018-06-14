@@ -1,0 +1,9 @@
+C:\Users\wuyetz\source\repos\WC\WC\obj\Debug\WC.csprojResolveAssemblyReference.cache
+C:\Users\wuyetz\source\repos\WC\WC\obj\Debug\WC.csproj.CoreCompileInputs.cache
+C:\Users\wuyetz\source\repos\WC\WC\bin\Debug\WC.exe.config
+C:\Users\wuyetz\source\repos\WC\WC\bin\Debug\WC.exe
+C:\Users\wuyetz\source\repos\WC\WC\bin\Debug\WC.pdb
+C:\Users\wuyetz\source\repos\WC\WC\obj\Debug\WC.exe
+C:\Users\wuyetz\source\repos\WC\WC\obj\Debug\WC.pdb
+C:\Users\wuyetz\source\repos\WC\WC\bin\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\wuyetz\source\repos\WC\WC\obj\Debug\WC.csproj.CopyComplete

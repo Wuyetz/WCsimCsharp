@@ -68,12 +68,6 @@ namespace WC
 
             }
 
-            //         return new Tuple<double, double>(gx, gy);
-            //  Console.Write(gx);
-            /*
-                        gx = Math.Round(Rando() * 3.2 * x.Power / y.Power);
-                        gy = Math.Round(Rando() * 3.2 * y.Power / x.Power);
-             */
             int sx = Convert.ToInt32(gx);
             int sy = Convert.ToInt32(gy);
 
@@ -123,25 +117,16 @@ namespace WC
 
             }
 
-            //         return new Tuple<double, double>(gx, gy);
-            //  Console.Write(gx);
-            /*
-                        gx = Math.Round(Rando() * 3.2 * x.Power / y.Power);
-                        gy = Math.Round(Rando() * 3.2 * y.Power / x.Power);
-             */
-            //    int sx = Convert.ToInt32(gx);
-            //    int sy = Convert.ToInt32(gy);          
-
 
             if (gx > gy)
             {
-                Console.WriteLine(x.Name + " won " + gx + " - " + gy + " against " + y.Name + " and " + /*" and goes to next stage!"*/ str);
+                Console.WriteLine(x.Name + " won " + gx + " - " + gy + " against " + y.Name + " and " + str);
                 return x;
 
             }
             else if (gx < gy)
             {
-                Console.WriteLine(y.Name + " won " + gy + " - " + gx + " against " + x.Name + " and " + /*" and goes to next stage!"*/ str);
+                Console.WriteLine(y.Name + " won " + gy + " - " + gx + " against " + x.Name + " and " + str);
                 return y;
             }
             else
@@ -151,34 +136,29 @@ namespace WC
                 int et = Convert.ToInt32(Math.Round(Rando() * 14));
                 if (pen == 0)
                 {
-                    Console.WriteLine(x.Name + " won on penalties and " + /*goes to next stage!"*/ str);
+                    Console.WriteLine(x.Name + " won on penalties and " + str);
                     return x;
                 }
                 else if (pen == 1)
                 {
-                    Console.WriteLine(y.Name + " won on penalties and " + /*goes to next stage!"*/ str);
+                    Console.WriteLine(y.Name + " won on penalties and " + str);
                     return y;
                 }
                 else if (pen == 2)
                 {
 
                    
-                    Console.WriteLine(x.Name + " won " + extraTime[et] + " during extra time and " +/*goes to next stage!"*/ str);
+                    Console.WriteLine(x.Name + " won " + extraTime[et] + " during extra time and " + str);
                     return x;
                 }
                 else 
                 {
-                    Console.WriteLine(y.Name + " won " + extraTime[et] + " during extra time and " +/*goes to next stage!"*/ str);
+                    Console.WriteLine(y.Name + " won " + extraTime[et] + " during extra time and " + str);
                     return y;
 
                 }
             }
             
-
-
-            //   Console.WriteLine(x.Name + " VS " + y.Name + " : " + gx + " - " + gy);
-
-
         }
 
 
@@ -356,50 +336,7 @@ namespace WC
 
             }
 
- /*
 
-            groupAsort = groupA.OrderByDescending(c => c.Points).ThenByDescending(c => (c.Scored - c.Conceded)).ThenByDescending(c => c.Scored).ThenByDescending(c => c.Conceded).ToList();
-            groupBsort = groupB.OrderByDescending(c => c.Points).ThenByDescending(c => (c.Scored - c.Conceded)).ThenByDescending(c => c.Scored).ThenByDescending(c => c.Conceded).ToList();
-            groupCsort = groupC.OrderByDescending(c => c.Points).ThenByDescending(c => (c.Scored - c.Conceded)).ThenByDescending(c => c.Scored).ThenByDescending(c => c.Conceded).ToList();
-            groupDsort = groupD.OrderByDescending(c => c.Points).ThenByDescending(c => (c.Scored - c.Conceded)).ThenByDescending(c => c.Scored).ThenByDescending(c => c.Conceded).ToList();
-            groupEsort = groupE.OrderByDescending(c => c.Points).ThenByDescending(c => (c.Scored - c.Conceded)).ThenByDescending(c => c.Scored).ThenByDescending(c => c.Conceded).ToList();
-            groupFsort = groupF.OrderByDescending(c => c.Points).ThenByDescending(c => (c.Scored - c.Conceded)).ThenByDescending(c => c.Scored).ThenByDescending(c => c.Conceded).ToList();
-            groupGsort = groupG.OrderByDescending(c => c.Points).ThenByDescending(c => (c.Scored - c.Conceded)).ThenByDescending(c => c.Scored).ThenByDescending(c => c.Conceded).ToList();
-            groupHsort = groupH.OrderByDescending(c => c.Points).ThenByDescending(c => (c.Scored - c.Conceded)).ThenByDescending(c => c.Scored).ThenByDescending(c => c.Conceded).ToList();
-
-            for (int i = 0; i < 8; i++)
-            {
-                foreach (Team x in groups[i])
-                {
-                    Console.Read();
-                    Console.WriteLine("NAME:{0} / POINTS:{1} / SCORED:{2} / CONCEDED:{3} / GOAL DIFFERENCE:{4}", x.Name, x.Points, x.Scored, x.Conceded, (x.Scored-x.Conceded));
-                    Console.Read();
-                }
-
-            }
-
-*/
-/*
-            List<Team> progress = new List<Team>();
-
-            progress.Add(groupAsort[0]);
-            progress.Add(groupAsort[1]);
-            progress.Add(groupBsort[0]);
-            progress.Add(groupBsort[1]);
-            progress.Add(groupCsort[0]);
-            progress.Add(groupCsort[1]);
-            progress.Add(groupDsort[0]);
-            progress.Add(groupDsort[1]);
-            progress.Add(groupEsort[0]);
-            progress.Add(groupEsort[1]);
-            progress.Add(groupFsort[0]);
-            progress.Add(groupFsort[1]);
-            progress.Add(groupGsort[0]);
-            progress.Add(groupGsort[1]);
-            progress.Add(groupHsort[0]);
-            progress.Add(groupHsort[1]);
-
-*/
             List<Team> quarterfinal = new List<Team>();
             string quarter = "goes to quarterfinal!\n";
 
@@ -426,11 +363,6 @@ namespace WC
             quarterfinal.Add(ResultKnock(progress[10], progress[9], quarter));
             quarterfinal.Add(ResultKnock(progress[14], progress[13], quarter));
 
-
-
-
-            //   Console.WriteLine();
-         
 
             List<Team> semifinal = new List<Team>();
             string semi = "goes to semifinal!\n";
@@ -485,12 +417,6 @@ namespace WC
 
             ResultKnock(final[0], final[1], win);
             
-/*
-            for (int i = 0; i < 2; i++)
-            {
-                Console.WriteLine(third[i].Name);
-            }
-*/
             Console.WriteLine("\nTHE END");
             
             Console.ReadLine();
